@@ -6,8 +6,8 @@ Pod::Spec.new do |spec|
   spec.description            = "A personal framework that made by laohanme"
   spec.homepage               = "https://github.com/laohanme/LHHub"
   spec.license                = { :type => 'MIT', :file => 'LICENSE' }
-  spec.author                 = "laohame"
-  spec.social_media_url       = "https://twitter.com/laohame"
+  spec.author                 = "laohanme"
+  spec.social_media_url       = "https://twitter.com/laohanme"
   spec.platform               = :ios, "12.0"
   spec.ios.deployment_target  = '11.0'
   spec.source                 = { :git => "https://github.com/laohanme/LHHub.git", :tag => "#{spec.version}" }
