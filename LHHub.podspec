@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
   spec.name                   = "LHHub"
   spec.version                = "1.0.0"
-  spec.summary                = "A short description of LHHub."
+  spec.summary                = "A personal framework only use by laohanme"
   spec.description            = "A personal framework that made by laohanme"
   spec.homepage               = "https://github.com/laohanme/LHHub"
   spec.license                = { :type => 'MIT', :file => 'LICENSE' }
