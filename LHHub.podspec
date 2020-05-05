@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.summary                = "A short description of LHHub."
   spec.description            = "A personal framework that made by laohanme"
   spec.homepage               = "https://github.com/laohanme/LHHub"
-  spec.license                = "MIT"
+  spec.license                = { :type => 'MIT', :file => 'LICENSE' }
   spec.author                 = "laohame"
   spec.social_media_url       = "https://twitter.com/laohame"
   spec.platform               = :ios, "12.0"
