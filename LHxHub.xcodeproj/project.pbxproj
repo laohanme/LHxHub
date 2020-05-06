@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D35E8312461B3390034F808 /* LHHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D35E82F2461B3390034F808 /* LHHub.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D35E8312461B3390034F808 /* LHxHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D35E82F2461B3390034F808 /* LHxHub.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D35E8392461B3AC0034F808 /* LHService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D35E8382461B3AC0034F808 /* LHService.swift */; };
 		4D35E83B2461B3BA0034F808 /* LHNotificaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D35E83A2461B3BA0034F808 /* LHNotificaion.swift */; };
 		4D35E83D2461B3CD0034F808 /* LHApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D35E83C2461B3CD0034F808 /* LHApp.swift */; };
@@ -16,8 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D35E82C2461B3390034F808 /* LHHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LHHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D35E82F2461B3390034F808 /* LHHub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHub.h; sourceTree = "<group>"; };
+		4D35E82C2461B3390034F808 /* LHxHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LHxHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D35E82F2461B3390034F808 /* LHxHub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHxHub.h; sourceTree = "<group>"; };
 		4D35E8302461B3390034F808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D35E8382461B3AC0034F808 /* LHService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHService.swift; sourceTree = "<group>"; };
 		4D35E83A2461B3BA0034F808 /* LHNotificaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHNotificaion.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		4D35E8222461B3390034F808 = {
 			isa = PBXGroup;
 			children = (
-				4D35E82E2461B3390034F808 /* LHHub */,
+				4D35E82E2461B3390034F808 /* LHxHub */,
 				4D35E82D2461B3390034F808 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,19 +48,19 @@
 		4D35E82D2461B3390034F808 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4D35E82C2461B3390034F808 /* LHHub.framework */,
+				4D35E82C2461B3390034F808 /* LHxHub.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D35E82E2461B3390034F808 /* LHHub */ = {
+		4D35E82E2461B3390034F808 /* LHxHub */ = {
 			isa = PBXGroup;
 			children = (
 				4D35E8372461B39D0034F808 /* Source */,
-				4D35E82F2461B3390034F808 /* LHHub.h */,
+				4D35E82F2461B3390034F808 /* LHxHub.h */,
 				4D35E8302461B3390034F808 /* Info.plist */,
 			);
-			path = LHHub;
+			path = LHxHub;
 			sourceTree = "<group>";
 		};
 		4D35E8372461B39D0034F808 /* Source */ = {
@@ -82,16 +82,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D35E8312461B3390034F808 /* LHHub.h in Headers */,
+				4D35E8312461B3390034F808 /* LHxHub.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4D35E82B2461B3390034F808 /* LHHub */ = {
+		4D35E82B2461B3390034F808 /* LHxHub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D35E8342461B3390034F808 /* Build configuration list for PBXNativeTarget "LHHub" */;
+			buildConfigurationList = 4D35E8342461B3390034F808 /* Build configuration list for PBXNativeTarget "LHxHub" */;
 			buildPhases = (
 				4D35E8272461B3390034F808 /* Headers */,
 				4D35E8282461B3390034F808 /* Sources */,
@@ -102,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = LHHub;
+			name = LHxHub;
 			productName = LHHub;
-			productReference = 4D35E82C2461B3390034F808 /* LHHub.framework */;
+			productReference = 4D35E82C2461B3390034F808 /* LHxHub.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4D35E8262461B3390034F808 /* Build configuration list for PBXProject "LHHub" */;
+			buildConfigurationList = 4D35E8262461B3390034F808 /* Build configuration list for PBXProject "LHxHub" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4D35E82B2461B3390034F808 /* LHHub */,
+				4D35E82B2461B3390034F808 /* LHxHub */,
 			);
 		};
 /* End PBXProject section */
@@ -295,15 +295,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LHHub/Info.plist;
+				INFOPLIST_FILE = LHxHub/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.laohanme.LHHub;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.laohanme.LHxHub;
+				PRODUCT_NAME = LHxHub;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -321,15 +321,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LHHub/Info.plist;
+				INFOPLIST_FILE = LHxHub/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.laohanme.LHHub;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.laohanme.LHxHub;
+				PRODUCT_NAME = LHxHub;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -340,7 +340,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D35E8262461B3390034F808 /* Build configuration list for PBXProject "LHHub" */ = {
+		4D35E8262461B3390034F808 /* Build configuration list for PBXProject "LHxHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D35E8322461B3390034F808 /* Debug */,
@@ -349,7 +349,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D35E8342461B3390034F808 /* Build configuration list for PBXNativeTarget "LHHub" */ = {
+		4D35E8342461B3390034F808 /* Build configuration list for PBXNativeTarget "LHxHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D35E8352461B3390034F808 /* Debug */,
