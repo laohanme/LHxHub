@@ -17,7 +17,7 @@ public struct ScheduledData {
     var category: String?
     var isRepeat: Bool?
     var isActive: Bool
-    
+
     public init(id: String, title: String, body: String, date: DateComponents, category: String? = nil, isRepeat: Bool? = nil, isActive: Bool) {
         self.id = id
         self.title = title
@@ -36,7 +36,7 @@ public enum RemoveNotificationType {
 }
 
 public struct LHNotification {
-    
+
     // MARK: Permission to allow user notification
     /// Request authorization user notification permission
     public static func registerNotification(cb: @escaping(Bool)->()) {
@@ -53,7 +53,7 @@ public struct LHNotification {
             }
         }
     }
-    
+
     // MARK: Add scheduled notification
     /// Request to add scheduled nofitication `ScheduledData`
     public static func scheduledNotfication(data scheduled: ScheduledData) {
@@ -64,14 +64,14 @@ public struct LHNotification {
         content.categoryIdentifier = scheduled.category ?? "Uncategories"
         content.sound = .default
         //content.userInfo = ["customData": "fizzbuzz"]
-        
+
         let isRepeat = scheduled.isRepeat ?? false
         let trigger = UNCalendarNotificationTrigger(dateMatching: scheduled.date, repeats: isRepeat)
         let request = UNNotificationRequest(identifier: scheduled.id, content: content, trigger: trigger)
         notificationCenter.add(request)
         isEnableLog ? print("***** LH SUCCESS: ADD SCHEDULED NOTIFICATION ID: \(scheduled.id) *****") : nil
     }
-    
+
     // MARK: Remove notification by type
     /// Request to remove nofitication by type selected  `removeNotificationType`
     public static func removeNotification(remove type: RemoveNotificationType) {
@@ -88,7 +88,7 @@ public struct LHNotification {
             isEnableLog ? print("***** LH SUCCESS: REMOVE ALL DELIVERED NOTIFICATION *****") : nil
         }
     }
-    
+
     // MARK: Retrieved pending notification
     /// Retrieved  all current pending notification
     public static func getAllPendingNotification(cb: @escaping(([String])->())) {

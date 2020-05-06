@@ -10,9 +10,9 @@ import Foundation
 import StoreKit
 
 public struct LHAppStore {
-    
+
     private init() {}
-    
+
     // MARK: Open and view app in AppStore
     public static func openAppStore(app id: String) {
         if let url = URL(string: "itms-apps://itunes.apple.com/app/id\(id)"), UIApplication.shared.canOpenURL(url) {
@@ -23,7 +23,7 @@ public struct LHAppStore {
             }
         }
     }
-    
+
     // MARK: Check app is update available
     /// Request to check for the app is update avaiable or not, this request was send to itunes.apple.com and return the data
     /// - itunes server data may update every 6 hours
@@ -35,7 +35,7 @@ public struct LHAppStore {
                 cb(false)
                 return
         }
-        
+
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             do {
                 if let error = error { throw error }
@@ -50,7 +50,7 @@ public struct LHAppStore {
                 }
 
                 let compareResult = currentVersion.compare(version, options: .numeric)
-                
+
                 DispatchQueue.main.async {
                     cb(compareResult == .orderedAscending)
                 }
@@ -60,14 +60,14 @@ public struct LHAppStore {
         }
         .resume()
     }
-    
+
     // MARK: Star review prompt on app
     public static func requestInAppReview() {
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
         }
     }
-    
+
     // MARK: Write review rediect to AppStore
     public static func requestWriteReview(appID: String, force: Bool) {
         if force {

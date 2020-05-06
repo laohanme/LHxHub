@@ -16,7 +16,7 @@ public enum OpenSystemType: String {
 }
 
 public struct LHApp {
-    
+
     // MARK: Open system apps on device by type
     /// Request to open system app by `openSystemType`
     public static func openSystem(open type: OpenSystemType) {
@@ -33,7 +33,7 @@ public struct LHApp {
             }
         }
     }
-    
+
     private static func openURL(url: URL) {
         if UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10.0, *) {
