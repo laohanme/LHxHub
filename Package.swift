@@ -24,5 +24,6 @@ let package = Package(
         .testTarget(
             name: "LHxHubTests",
             dependencies: ["LHxHub"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
