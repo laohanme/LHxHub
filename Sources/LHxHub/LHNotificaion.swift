@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 
+@available(iOS 10.0, *)
 private let notificationCenter = UNUserNotificationCenter.current()
 
 public struct ScheduledData {
@@ -35,6 +36,7 @@ public enum RemoveNotificationType {
     case isRemoveAllDelivered
 }
 
+@available(iOS 10.0, *)
 public struct LHNotification {
 
     // MARK: Permission to allow user notification
