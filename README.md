@@ -7,6 +7,16 @@
 [![GitHub stars](https://img.shields.io/github/stars/laohanme/LHxHub)](https://github.com/laohanme/LHxHub/stargazers)
 [![GitHub license](https://img.shields.io/github/license/laohanme/LHxHub)](https://github.com/laohanme/LHxHub/blob/master/LICENSE)
 
+#### File Extension
+- LHApp
+- LHAlert
+- LHAppStore
+- LHColor
+- LHDateTime
+- LHNotification
+- LHService
+- LHString
+
 **SPM**
 ```
 https://github.com/laohanme/LHxHub.git
