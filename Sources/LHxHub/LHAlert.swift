@@ -8,27 +8,43 @@
 import Foundation
 import UIKit
 
-// TODO: Need Complete
-
+// MARK: Alert Type
 public enum LHAlertType {
-    case type1(title: String, msg: String)
+    /// info alert is just mainly use to make acknowledge
+    case info(title: String, msg: String)
+    /// confirmation alert make decision
+    case confirmation(title: String, msg: String)
 }
-
 
 public struct LHAlert {
     
-    static func popAlert(_ vc: UIViewController, type: LHAlertType) {
+    static func popAlert(_ vc: UIViewController, type: LHAlertType, cb: @escaping(Bool)->()) {
         switch type {
-        case let .type1(title, msg)
-            commonAlert(on: vc, title: title, message: msg)
-        default:
-            break
+        case let .info(title, msg):
+            infoAlert(on: vc, title: title, message: msg) {
+                cb($0)
+            }
+        case let .confirmation(title, msg):
+            confirmationAlert(on: vc, title: title, message: msg) {
+                cb($0)
+            }
         }
     }
     
-    private static func commonAlert(on vc: UIViewController, title: String, message: String) {
+    private static func infoAlert(on vc: UIViewController, title: String, message: String, cb: @escaping(Bool)->()) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in cb(true) }))
+        
+        DispatchQueue.main.async {
+            vc.present(alert, animated: true)
+        }
+    }
+    
+    private static func confirmationAlert(on vc: UIViewController, title: String, message: String, cb: @escaping(Bool)->()) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { action in cb(false) }))
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { action in cb(true) }))
+        
         DispatchQueue.main.async {
             vc.present(alert, animated: true)
         }
