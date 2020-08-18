@@ -11,6 +11,7 @@
 - LHApp
 - LHAlert
 - LHAppStore
+- LHBadgeButton
 - LHColor
 - LHDateTime
 - LHNotification
