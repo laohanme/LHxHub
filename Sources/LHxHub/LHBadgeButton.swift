@@ -127,7 +127,7 @@ public class BadgedButtonItem: UIBarButtonItem {
         setup()
     }
     
-    init(with image: UIImage?) {
+    public init(with image: UIImage?) {
         super.init()
         setup(image: image)
     }
