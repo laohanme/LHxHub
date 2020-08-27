@@ -3,6 +3,7 @@
 //  
 //
 //  Created by laohame on 18/08/2020.
+//  Credit to https://github.com/iosdevmax
 //  Original Source Code from https://github.com/iosdevmax/BadgedBarButtonItem/blob/master/BadgedBarButtonItem/BadgedBarButtonItem.swift
 
 import UIKit
@@ -138,7 +139,6 @@ public class BadgedButtonItem: UIBarButtonItem {
     }
     
     private func setup(image: UIImage? = nil) {
-        
         self.filterBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         self.filterBtn.adjustsImageWhenHighlighted = false
         self.filterBtn.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
@@ -167,7 +167,7 @@ public class BadgedButtonItem: UIBarButtonItem {
     private func animateBadge(_ animate: Bool?) {
         guard animate == true else { return }
         lblBadge.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 3, options: [.curveLinear], animations: { [weak self] in
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 3, options: [.curveLinear], animations: { [weak self] in
             
             guard let strongSelf = self else { return }
             strongSelf.lblBadge.transform = .identity
