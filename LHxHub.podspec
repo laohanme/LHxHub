@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name                   = "LHxHub"
-  spec.version                = "1.0.7"
+  spec.version                = "1.0.8"
   spec.summary                = "A personal framework only use by laohanme"
   spec.description            = "A personal framework that made by laohanme"
   spec.homepage               = "https://github.com/laohanme/LHxHub"
