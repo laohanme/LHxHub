@@ -17,6 +17,7 @@
 - LHNotification
 - LHService
 - LHString
+- LHTableView
 
 **SPM**
 ```
