@@ -10,6 +10,7 @@ import UIKit
 
 // MARK: Extension TableView
 /// Let UITableView more intuitive
+@available(iOS 10, *)
 public extension UITableView {
     
     // MARK: Empty View
@@ -24,7 +25,11 @@ public extension UITableView {
         
         // Title
         let emptyTitle = UILabel()
-        emptyTitle.textColor = .label
+        if #available(iOS 13, *) {
+            emptyTitle.textColor = .label
+        } else {
+            emptyTitle.textColor = .black
+        }
         emptyTitle.font = .systemFont(ofSize: 20, weight: .semibold)
         emptyTitle.numberOfLines = .max
         
@@ -63,6 +68,5 @@ public extension UITableView {
     func restore() {
         self.backgroundView = nil
     }
-    
     
 }
