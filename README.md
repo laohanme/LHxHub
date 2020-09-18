@@ -8,16 +8,18 @@
 [![GitHub license](https://img.shields.io/github/license/laohanme/LHxHub)](https://github.com/laohanme/LHxHub/blob/master/LICENSE)
 
 #### File Extension
-- LHApp
 - LHAlert
+- LHApp
 - LHAppStore
 - LHBadgeButton
 - LHColor
 - LHDateTime
+- LHLabel
 - LHNotification
 - LHService
 - LHString
 - LHTableView
+- LHView
 
 **SPM**
 ```
