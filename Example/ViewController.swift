@@ -12,8 +12,14 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "LHxHub"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        LHAlert.popAlert(self, type: .confirmation(title: "Hello World", msg: "This is new message")) {
+            print($0)
+        }
+        
     }
 
 }

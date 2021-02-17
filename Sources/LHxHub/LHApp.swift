@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum OpenSystemType: String {
+public enum SystemApp: String {
     case calendar = "calshow://"
     case photos = "photos-redirect://"
     case maps = "maps://"
@@ -19,11 +19,11 @@ public struct LHApp {
 
     // MARK: Open system apps on device by type
     /// Request to open system app by `openSystemType`
-    public static func openSystem(open type: OpenSystemType) {
-        switch type {
+    public static func open(open app: SystemApp) {
+        switch app {
         case .photos, .calendar, .maps:
             DispatchQueue.main.async {
-                guard let url = URL(string: type.rawValue) else { return }
+                guard let url = URL(string: app.rawValue) else { return }
                 openURL(url: url)
             }
         case .settings:
@@ -42,7 +42,7 @@ public struct LHApp {
                 UIApplication.shared.openURL(url as URL)
             }
         } else {
-            isEnableLog ? print("***** LH - Maybe is the device have no installed the apps *****") : nil
+            isEnableLog ? print("***** LH - The apps is not exist in current device *****") : nil
         }
     }
 }

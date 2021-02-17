@@ -17,6 +17,7 @@ public extension UIView {
     }
 }
 
+@available(iOS 9.0, *)
 public extension UIStackView {
     
     // MARK: Simple and easy to add arranged subviews in one line code
