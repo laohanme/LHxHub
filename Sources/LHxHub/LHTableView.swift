@@ -15,13 +15,8 @@ public extension UITableView {
     
     // MARK: Empty View
     /// Use to show empty view if table data is empty
-    func emptyView(img: UIImage, title: String, subtitle: String) {
+    func emptyView(title: String, subtitle: String? = nil) {
         let view = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
-        
-        // Image View
-        let image = UIImageView()
-        image.image = img
-        image.contentMode = .scaleAspectFill
         
         // Title
         let emptyTitle = UILabel()
@@ -30,7 +25,7 @@ public extension UITableView {
         } else {
             emptyTitle.textColor = .black
         }
-        emptyTitle.font = .systemFont(ofSize: 20, weight: .semibold)
+        emptyTitle.font = .systemFont(ofSize: 17, weight: .semibold)
         emptyTitle.numberOfLines = .max
         
         // Subtitle
@@ -39,21 +34,15 @@ public extension UITableView {
         emptySubtitle.font = .systemFont(ofSize: 15, weight: .regular)
         emptySubtitle.numberOfLines = .max
         
-        view.addSubview(image)
         view.addSubview(emptyTitle)
         view.addSubview(emptySubtitle)
         
-        image.translatesAutoresizingMaskIntoConstraints = false
         emptyTitle.translatesAutoresizingMaskIntoConstraints = false
         emptySubtitle.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            image.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            image.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            image.heightAnchor.constraint(equalToConstant: 200),
-            
             emptyTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            emptyTitle.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 50),
+            emptyTitle.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
             emptySubtitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emptySubtitle.topAnchor.constraint(equalTo: emptyTitle.bottomAnchor, constant: 5)
@@ -62,9 +51,10 @@ public extension UITableView {
         self.backgroundView = view
         
         emptyTitle.text = title
-        emptySubtitle.text = subtitle
+        emptySubtitle.text = subtitle ?? ""
     }
     
+    // MARK: Restore TableView
     func restore() {
         self.backgroundView = nil
     }
